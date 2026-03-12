@@ -1,0 +1,15 @@
+st = int(input())
+stop = int(input())
+f = False
+for n in range(st, stop + 1):
+	if n > 1:
+		flag = True
+		for i in range(2, n):
+			if n % i == 0:
+				flag = False
+				break
+		if flag:
+			print(n)
+			f = True
+if not f:
+	print("No primes")
